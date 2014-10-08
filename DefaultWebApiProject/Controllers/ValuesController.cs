@@ -42,8 +42,8 @@ namespace DefaultWebApiProject.Controllers
 //            fileName = Path.ChangeExtension(fileName, ".png");
 
             response.Content.Headers.ContentDisposition.FileName = fileContent.Headers.ContentDisposition.FileName;
-            
-            response.Content.Headers.ContentType = new MediaTypeHeaderValue("image/png");
+
+            response.Content.Headers.ContentType = fileContent.Headers.ContentType;
 
             return response;
         }
